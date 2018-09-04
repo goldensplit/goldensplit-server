@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+  nginx:
+    volumes:
+      - ./nginx/conf.d.dev:/etc/nginx/conf.d
+
+  goldensplit:
+    extra_hosts:
+      "dev.goldensplit.ru": "127.0.0.1"
+    command: make run-dev

@@ -1,0 +1,26 @@
+# Binaries
+*.a
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+goldensplit-server
+
+# Test
+*.test
+coverage.txt
+
+# IDEs
+.vscode/
+.idea/
+.atom/
+
+# Dependencies
+go.mod
+go.sum
+vendor/
+
+# Dev or security
+*.env
+docker-compose.override.yml
