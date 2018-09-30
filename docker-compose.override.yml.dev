@@ -10,3 +10,7 @@ services:
     extra_hosts:
       "dev.goldensplit.ru": "127.0.0.1"
     command: make run-dev
+
+  db:
+    ports:
+      - 5432:5432

@@ -21,3 +21,7 @@ services:
     volumes:
       - .:/goldensplit-server
     command: make entrypoint
+
+  db:
+    image: postgres:10.5
+    restart: always
