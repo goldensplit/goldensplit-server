@@ -32,7 +32,7 @@ type Video struct {
 	gorm.Model
 	UploaderID uint
 	Info       string
-	Tags       []string
+	Tags       []string `gorm:"type:varchar(255)[]"`
 }
 
 func (User) mock()    {}
