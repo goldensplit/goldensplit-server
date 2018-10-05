@@ -1,4 +1,3 @@
-.PHONY: all get get-dev build run run-dev lint test inspect
 .PHONY: entrypoint restart ps logs
 
 PROJECT = goldensplit-server
@@ -11,11 +10,11 @@ COVERAGE = coverage.txt
 
 all: build
 
+# ================== Settings ==================
+.PHONY: get get-dev install install-dev
+
 _copy:
 	@cp go.mod.prod go.mod
-
-_copy-dev: _copy
-	@cp docker-compose.override.yml.dev docker-compose.override.yml
 
 get:
 	@go mod download
@@ -26,12 +25,15 @@ get-dev: get
 
 install: _copy get
 
-install-dev: _copy-dev get-dev
+install-dev: _copy get-dev
+
+# ================== Server ==================
+.PHONY: build run run-dev lint test inspect
 
 build:
 	@go build
 
-run:
+run: build
 	@./$(BIN)
 
 run-dev:
@@ -44,16 +46,3 @@ test:
 	@go test -v --race --covermode=atomic --coverprofile=$(COVERAGE) $(SRC)
 
 inspect: lint test
-
-# ========= Docker =========
-
-entrypoint: build run
-
-restart:
-	@docker-compose up --remove-orphans -d --force-recreate $(c)
-
-ps:
-	@docker-compose ps
-
-logs:
-	@docker-compose logs -f $(c)
