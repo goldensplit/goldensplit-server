@@ -5,7 +5,7 @@
 *.dll
 *.so
 *.dylib
-goldensplit-server
+gs-server
 
 # Test
 *.test

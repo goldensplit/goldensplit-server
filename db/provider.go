@@ -5,7 +5,7 @@
 package db
 
 import (
-	"github.com/goldensplit/goldensplit-server/model"
+	"github.com/goldensplit/gs-server/model"
 )
 
 // Provider TODO: Docs.

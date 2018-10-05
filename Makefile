@@ -1,6 +1,6 @@
 .PHONY: entrypoint restart ps logs
 
-PROJECT = goldensplit-server
+PROJECT = gs-server
 BIN = $(PROJECT)
 
 SRC_PATH = .

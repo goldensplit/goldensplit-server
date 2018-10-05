@@ -1,4 +1,4 @@
-module github.com/goldensplit/goldensplit-server
+module github.com/goldensplit/gs-server
 
 require (
 	github.com/gorilla/mux v1.6.2

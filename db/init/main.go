@@ -5,7 +5,7 @@
 package main
 
 import (
-	"github.com/goldensplit/goldensplit-server/model"
+	"github.com/goldensplit/gs-server/model"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
