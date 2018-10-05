@@ -1,3 +1,7 @@
+// Copyright 2018 Kirill Lapshin. All rights reserved.
+// Use of this source code is governed by a MIT style
+// license that can be found in the LICENSE file.
+
 package main
 
 import (
@@ -29,7 +33,7 @@ func createDB() {
 	db.Exec("CREATE DATABASE goldensplit;")
 }
 
-func createTables(db *gorm.DB) error  {
+func createTables(db *gorm.DB) error {
 	tx := db.Begin()
 
 	if err := tx.Error; err != nil {
