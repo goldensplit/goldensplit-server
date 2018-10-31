@@ -5,28 +5,15 @@
 package main
 
 import (
-	"log"
-	"net/http"
-	"time"
-
-	"github.com/gorilla/mux"
+	"github.com/gin-gonic/gin"
+	"github.com/goldensplit/gs-server/router"
 )
 
-func indexHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello, GoldenSplit!"))
-}
-
 func main() {
-	router := mux.NewRouter()
-	router.HandleFunc("/", indexHandler)
-
-	server := &http.Server{
-		Handler:      router,
-		Addr:         "0.0.0.0:80",
-		WriteTimeout: 15 * time.Second,
-		ReadTimeout:  15 * time.Second,
+	server := gin.Default()
+	api := server.Group("/api")
+	for _, route := range router.Registered() {
+		route.Route(api)
 	}
-
-	log.Output(1, "Server started...")
-	log.Fatal(server.ListenAndServe())
+	server.Run(":80")
 }
