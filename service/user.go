@@ -6,8 +6,8 @@
 package service
 
 import (
-	"github.com/goldensplit/gs-server/model"
-	"github.com/goldensplit/gs-server/provider"
+	"github.com/goldensplit/gs-api/model"
+	"github.com/goldensplit/gs-api/provider"
 )
 
 // NewUser TODO: Docs.

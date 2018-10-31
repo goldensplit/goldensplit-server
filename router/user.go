@@ -6,8 +6,8 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/goldensplit/gs-server/model"
-	"github.com/goldensplit/gs-server/service"
+	"github.com/goldensplit/gs-api/model"
+	"github.com/goldensplit/gs-api/service"
 )
 
 // User TODO: Docs.

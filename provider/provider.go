@@ -6,7 +6,7 @@
 package provider
 
 import (
-	"github.com/goldensplit/gs-server/model"
+	"github.com/goldensplit/gs-api/model"
 	"github.com/jinzhu/gorm"
 )
 

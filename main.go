@@ -6,7 +6,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/goldensplit/gs-server/router"
+	"github.com/goldensplit/gs-api/router"
 )
 
 func main() {

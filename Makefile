@@ -1,6 +1,6 @@
 .PHONY: entrypoint restart ps logs
 
-PROJECT = gs-server
+PROJECT = gs-api
 BIN = $(PROJECT)
 
 SRC_PATH = .
